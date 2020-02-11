@@ -1,3 +1,7 @@
+#Off server signature and on rewrite engine
+ServerSignature Off
+RewriteEngine on
+
 #Protect against Code injection and XSS attacks
 RewriteCond %{QUERY_STRING} base64_encode.*\(.*\) [OR]
 RewriteCond %{QUERY_STRING} (\<|%3C).*script.*(\>|%3E) [NC,OR]
